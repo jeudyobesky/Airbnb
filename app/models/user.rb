@@ -5,5 +5,6 @@ class User < ApplicationRecord
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
   validates :phone_number, length: { is: 9 }
   validates :description, length: { minimum: 5 }
-  has_one :apartment 
+  has_one :apartment
+  has_many :reservations
 end

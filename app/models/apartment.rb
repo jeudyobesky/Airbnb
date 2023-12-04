@@ -11,4 +11,5 @@ class Apartment < ApplicationRecord
     presence: true,
     length: { in: 10..30 }
   validates :wifi, presence: true
+  has_many :reservations
 end
